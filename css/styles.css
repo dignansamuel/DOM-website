@@ -1,0 +1,679 @@
+/* ============================================================
+   DOMAN COACHING — STYLES
+   Brand colours live in :root — change them once, they update
+   everywhere.
+   ============================================================ */
+
+:root {
+  --orange: #ff6b1a;
+  --orange-dark: #d9540e;
+  --black: #0d0d0d;
+  --black-soft: #161616;
+  --black-card: #1e1e1e;
+  --white: #f5f3f0;
+  --grey: #9a958f;
+  --border: #2a2a2a;
+
+  --font-display: 'Oswald', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --section-pad: clamp(4rem, 9vw, 7.5rem);
+}
+
+/* ---------- Reset & base ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, video { max-width: 100%; display: block; }
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+section { padding-block: var(--section-pad); }
+
+/* ---------- Typography ---------- */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+
+.accent { color: var(--orange); }
+
+.section-headline {
+  font-size: clamp(1.75rem, 4.2vw, 2.75rem);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* ---------- Buttons ---------- */
+.cta-button {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--black);
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  font-size: 1.05rem;
+  padding: 1rem 2.25rem;
+  border-radius: 4px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background: var(--orange-dark);
+  transform: translateY(-2px);
+}
+
+.cta-small {
+  font-size: 0.9rem;
+  padding: 0.65rem 1.4rem;
+}
+
+/* ---------- Placeholders ----------
+   Temporary boxes marking where real assets go.
+   Delete this block once all media is in place. */
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--black-card);
+  border: 2px dashed var(--orange);
+  border-radius: 6px;
+  text-align: center;
+  padding: 1.5rem;
+  min-height: 200px;
+}
+
+.placeholder-label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--orange);
+  font-size: 0.95rem;
+}
+
+.placeholder-note {
+  color: var(--grey);
+  font-size: 0.85rem;
+}
+
+.placeholder-video {
+  aspect-ratio: 16 / 9;
+  width: min(820px, 100%);
+  margin: 2.5rem auto;
+}
+
+.placeholder-portrait { min-height: 420px; }
+
+.placeholder-lifestyle { min-height: 180px; padding: 1rem; }
+
+/* ============================================================
+   SECTION 1: HEADER
+   ============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(13, 13, 13, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.9rem;
+}
+
+.brand-name {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.1em;
+}
+
+.brand-tagline {
+  display: block;
+  color: var(--grey);
+  font-size: 0.78rem;
+}
+
+/* ============================================================
+   SECTION 2: HERO
+   ============================================================ */
+.hero {
+  text-align: center;
+  padding-top: clamp(4rem, 10vw, 7rem);
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255, 107, 26, 0.12), transparent);
+}
+
+.hero-headline {
+  font-size: clamp(2.25rem, 6vw, 4rem);
+  max-width: 18ch;
+  margin: 0 auto 1.5rem;
+}
+
+.hero-sub {
+  max-width: 60ch;
+  margin: 0 auto;
+  color: var(--grey);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+/* ============================================================
+   SECTION 3: RESULTS
+   ============================================================ */
+.results { background: var(--black-soft); }
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.results-copy {
+  text-align: center;
+  margin-top: 2.5rem;
+  color: var(--grey);
+  font-size: 1.1rem;
+  max-width: 55ch;
+  margin-inline: auto;
+}
+
+/* ============================================================
+   SECTION 4: IDENTITY CAPTURE
+   ============================================================ */
+.identity-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.power-statement {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  color: var(--orange);
+}
+
+.identity-content p { margin-bottom: 1.25rem; }
+
+.identity-list {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.identity-list li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.identity-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--orange);
+}
+
+/* ============================================================
+   SECTION 5: PHASES
+   ============================================================ */
+.phases { background: var(--black-soft); }
+
+.phases-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.phase-card {
+  background: var(--black-card);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--orange);
+  border-radius: 6px;
+  padding: 2rem 1.5rem;
+}
+
+.phase-number {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--orange);
+  opacity: 0.45;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.phase-card h3 { margin-bottom: 0.75rem; font-size: 1.35rem; }
+
+.phase-card p { color: var(--grey); font-size: 0.95rem; }
+
+/* ============================================================
+   SECTION 6: THE GAP
+   ============================================================ */
+.gap-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.gap-col {
+  border-radius: 6px;
+  padding: 2rem;
+}
+
+.gap-now {
+  background: var(--black-card);
+  border: 1px solid var(--border);
+}
+
+.gap-future {
+  background: var(--black-card);
+  border: 1px solid var(--orange);
+}
+
+.gap-col h3 { margin-bottom: 1.25rem; font-size: 1.3rem; }
+
+.gap-future h3 { color: var(--orange); }
+
+.gap-col ul { list-style: none; }
+
+.gap-col li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.6rem;
+}
+
+.gap-now li::before {
+  content: "✕";
+  position: absolute;
+  left: 0;
+  color: var(--grey);
+  font-size: 0.8rem;
+  top: 0.2rem;
+}
+
+.gap-future li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--orange);
+  font-size: 0.85rem;
+  top: 0.15rem;
+}
+
+.line-breaker {
+  text-align: center;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  margin-top: 3rem;
+}
+
+/* ============================================================
+   SECTION 7: CORE FOUR PILLARS
+   ============================================================ */
+.pillars { background: var(--black-soft); }
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.pillar-card {
+  background: var(--black-card);
+  border-left: 3px solid var(--orange);
+  border-radius: 6px;
+  padding: 2rem;
+}
+
+.pillar-card h3 { margin-bottom: 0.5rem; font-size: 1.35rem; }
+
+.pillar-card p { color: var(--grey); }
+
+/* ============================================================
+   SECTION 8: WHAT'S INCLUDED
+   ============================================================ */
+.included-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.included-grid li {
+  background: var(--black-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  font-weight: 500;
+  position: relative;
+  padding-left: 2.6rem;
+}
+
+.included-grid li::before {
+  content: "✓";
+  position: absolute;
+  left: 1.1rem;
+  color: var(--orange);
+  font-weight: 700;
+}
+
+/* ============================================================
+   SECTION 9: OUTCOMES
+   ============================================================ */
+.outcomes { background: var(--black-soft); text-align: center; }
+
+.outcomes-list p {
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+  margin-bottom: 0.9rem;
+}
+
+.outcome-final {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--orange);
+  font-size: clamp(1.25rem, 2.8vw, 1.6rem) !important;
+  margin-top: 1.75rem;
+}
+
+/* ============================================================
+   SECTION 10: LIFESTYLE
+   ============================================================ */
+.lifestyle-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.lifestyle-copy {
+  text-align: center;
+  margin-top: 2.5rem;
+  color: var(--grey);
+  font-size: 1.15rem;
+}
+
+/* ============================================================
+   SECTION 11: TESTIMONIAL TICKER
+   ============================================================ */
+.testimonial-bar {
+  padding-block: 1.5rem;
+  background: var(--orange);
+  overflow: hidden;
+}
+
+.ticker { overflow: hidden; }
+
+.ticker-track {
+  display: flex;
+  gap: 4rem;
+  width: max-content;
+  animation: ticker-scroll 40s linear infinite;
+}
+
+.ticker-track span {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--black);
+  white-space: nowrap;
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; }
+}
+
+/* ============================================================
+   SECTION 12: PERSONAL STORY
+   ============================================================ */
+.story-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.story .section-headline { text-align: left; }
+
+.story-content p { margin-bottom: 1.1rem; }
+
+.story-closer {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+  color: var(--orange);
+  margin-top: 1.75rem;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   SECTION 13: APPLICATION STEPS
+   ============================================================ */
+.steps { background: var(--black-soft); }
+
+.steps-list {
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.steps-list li {
+  border-left: 2px solid var(--border);
+  padding: 0 0 2rem 2rem;
+  position: relative;
+}
+
+.steps-list li:last-child { padding-bottom: 0; }
+
+.steps-list h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--black);
+  font-size: 1.05rem;
+  margin-left: -3.1rem;
+}
+
+.steps-list p { color: var(--grey); }
+
+.steps-cta { text-align: center; margin-top: 3rem; }
+
+/* ============================================================
+   SECTION 14: EDUCATION
+   ============================================================ */
+.education-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.education-grid li {
+  background: var(--black-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* ============================================================
+   SECTION 15: FAQ
+   ============================================================ */
+.faq { background: var(--black-soft); }
+
+.faq-list { max-width: 750px; margin: 0 auto; }
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 1.25rem 2.5rem 1.25rem 0;
+  position: relative;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--orange);
+  font-size: 1.6rem;
+  font-weight: 400;
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::after {
+  content: "–";
+}
+
+.faq-item p {
+  color: var(--grey);
+  padding: 0 0 1.5rem;
+  max-width: 65ch;
+}
+
+/* ============================================================
+   SECTION 16: FINAL CLOSE
+   ============================================================ */
+.final-close {
+  text-align: center;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 100%, rgba(255, 107, 26, 0.12), transparent);
+}
+
+.final-close > .container > p {
+  color: var(--grey);
+  font-size: 1.15rem;
+}
+
+.final-list {
+  list-style: none;
+  margin: 2rem 0;
+}
+
+.final-list li {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: clamp(1.15rem, 2.6vw, 1.5rem);
+  color: var(--grey);
+  margin-bottom: 0.4rem;
+}
+
+.final-line {
+  font-size: 1.3rem !important;
+  color: var(--white) !important;
+  font-weight: 600;
+  margin-bottom: 2.25rem;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding-block: 2rem;
+  text-align: center;
+  color: var(--grey);
+  font-size: 0.85rem;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .results-grid { grid-template-columns: repeat(2, 1fr); }
+  .phases-grid { grid-template-columns: repeat(2, 1fr); }
+  .lifestyle-grid { grid-template-columns: repeat(2, 1fr); }
+  .education-grid { grid-template-columns: repeat(2, 1fr); }
+  .included-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .identity-inner,
+  .story-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .story-inner .placeholder-portrait { order: -1; }
+}
+
+@media (max-width: 560px) {
+  .header-inner { flex-direction: column; text-align: center; gap: 0.6rem; }
+
+  .results-grid,
+  .phases-grid,
+  .included-grid,
+  .education-grid,
+  .gap-columns { grid-template-columns: 1fr; }
+
+  .placeholder-portrait { min-height: 300px; }
+}
