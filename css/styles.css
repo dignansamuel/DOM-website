@@ -237,7 +237,7 @@ h1, h2, h3 {
 }
 
 .identity-list li::before {
-  content: "—";
+  content: "›";
   position: absolute;
   left: 0;
   color: var(--orange);
