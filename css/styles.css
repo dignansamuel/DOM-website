@@ -535,6 +535,16 @@ h1, h2, h3 {
 
 .steps-cta { text-align: center; margin-top: 3rem; }
 
+.booking-headline {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  margin-bottom: 1.5rem;
+}
+
+.calendly-inline-widget {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
 /* ============================================================
    SECTION 14: EDUCATION
    ============================================================ */
