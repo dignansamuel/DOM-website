@@ -193,6 +193,20 @@ h1, h2, h3 {
   gap: 1.25rem;
 }
 
+.result-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.result-photo:hover {
+  transform: translateY(-3px);
+  border-color: var(--orange);
+}
+
 .results-copy {
   text-align: center;
   margin-top: 2.5rem;
