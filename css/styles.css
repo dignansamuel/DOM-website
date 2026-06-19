@@ -693,11 +693,17 @@ h1, h2, h3 {
 @media (max-width: 560px) {
   .header-inner { flex-direction: column; text-align: center; gap: 0.6rem; }
 
-  .results-grid,
   .phases-grid,
   .included-grid,
   .education-grid,
   .gap-columns { grid-template-columns: 1fr; }
+
+  /* Keep transformations 2-per-row on mobile so the section
+     stays compact instead of one long scroll. */
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
 
   .placeholder-portrait { min-height: 300px; }
 }
