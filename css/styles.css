@@ -705,5 +705,13 @@ h1, h2, h3 {
     gap: 0.75rem;
   }
 
+  /* 9 photos in 2 columns leaves the last one alone. Center it
+     so the row looks intentional, not like one is missing. */
+  .results-grid > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 0.375rem);
+  }
+
   .placeholder-portrait { min-height: 300px; }
 }
