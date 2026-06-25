@@ -1,0 +1,47 @@
+name: Deploy to Hostinger
+
+# Every push to main uploads the site to Hostinger over FTP.
+# No GitHub-to-Hostinger account link needed — this only uses an
+# FTP username/password, so it works even when you manage someone
+# else's Hostinger account.
+#
+# One-time setup (in this GitHub repo → Settings → Secrets and
+# variables → Actions → "New repository secret"), add three secrets:
+#   FTP_HOST      e.g. ftp.reforgedmethod.com  (or the server IP / host
+#                 shown in hPanel → Files → FTP Accounts)
+#   FTP_USERNAME  the FTP account username from hPanel
+#   FTP_PASSWORD  that FTP account's password
+#
+# NOTE on server-dir below: most Hostinger main FTP accounts land in the
+# account home, so the web root is ./public_html/. If you instead created
+# an FTP account that is already scoped to public_html, change it to ./
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}   # lets you trigger a manual deploy from the Actions tab
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ./public_html/
+          # Only the site files get uploaded — repo/meta files are skipped.
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/.claude/**
+            README.md
+            .gitignore
+            .gitattributes
+            **/.DS_Store
