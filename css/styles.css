@@ -17,7 +17,7 @@
   --font-display: 'Oswald', sans-serif;
   --font-body: 'Inter', sans-serif;
 
-  --section-pad: clamp(4rem, 9vw, 7.5rem);
+  --section-pad: clamp(2.5rem, 5.5vw, 4.5rem);
 }
 
 /* ---------- Reset & base ---------- */
@@ -126,7 +126,7 @@ h1, h2, h3 {
 /* ---------- Real photos ---------- */
 .portrait-photo {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid var(--border);
@@ -614,7 +614,7 @@ h1, h2, h3 {
 .education-grid {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   max-width: 950px;
   margin: 0 auto;
