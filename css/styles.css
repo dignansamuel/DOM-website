@@ -5,8 +5,8 @@
    ============================================================ */
 
 :root {
-  --orange: #ff6b1a;
-  --orange-dark: #d9540e;
+  --gold: #e8c469;
+  --gold-dark: #d4ad4f;
   --black: #0d0d0d;
   --black-soft: #161616;
   --black-card: #1e1e1e;
@@ -51,7 +51,7 @@ h1, h2, h3 {
   letter-spacing: 0.01em;
 }
 
-.accent { color: var(--orange); }
+.accent { color: var(--gold); }
 
 .section-headline {
   font-size: clamp(1.75rem, 4.2vw, 2.75rem);
@@ -62,7 +62,7 @@ h1, h2, h3 {
 /* ---------- Buttons ---------- */
 .cta-button {
   display: inline-block;
-  background: var(--orange);
+  background: var(--gold);
   color: var(--black);
   font-family: var(--font-display);
   font-weight: 600;
@@ -76,7 +76,7 @@ h1, h2, h3 {
 }
 
 .cta-button:hover {
-  background: var(--orange-dark);
+  background: var(--gold-dark);
   transform: translateY(-2px);
 }
 
@@ -95,7 +95,7 @@ h1, h2, h3 {
   justify-content: center;
   gap: 0.5rem;
   background: var(--black-card);
-  border: 2px dashed var(--orange);
+  border: 2px dashed var(--gold);
   border-radius: 6px;
   text-align: center;
   padding: 1.5rem;
@@ -106,7 +106,7 @@ h1, h2, h3 {
   font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: 0.08em;
-  color: var(--orange);
+  color: var(--gold);
   font-size: 0.95rem;
 }
 
@@ -166,7 +166,7 @@ h1, h2, h3 {
   text-align: center;
   padding-top: clamp(4rem, 10vw, 7rem);
   background:
-    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255, 107, 26, 0.12), transparent);
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(232, 196, 105, 0.12), transparent);
 }
 
 .hero-headline {
@@ -204,7 +204,7 @@ h1, h2, h3 {
 
 .result-photo:hover {
   transform: translateY(-3px);
-  border-color: var(--orange);
+  border-color: var(--gold);
 }
 
 .results-copy {
@@ -233,7 +233,7 @@ h1, h2, h3 {
   text-transform: uppercase;
   line-height: 1.3;
   margin-bottom: 1.5rem;
-  color: var(--orange);
+  color: var(--gold);
 }
 
 .identity-content p { margin-bottom: 1.25rem; }
@@ -254,7 +254,7 @@ h1, h2, h3 {
   content: "›";
   position: absolute;
   left: 0;
-  color: var(--orange);
+  color: var(--gold);
 }
 
 /* ============================================================
@@ -271,7 +271,7 @@ h1, h2, h3 {
 .phase-card {
   background: var(--black-card);
   border: 1px solid var(--border);
-  border-top: 3px solid var(--orange);
+  border-top: 3px solid var(--gold);
   border-radius: 6px;
   padding: 2rem 1.5rem;
 }
@@ -280,7 +280,7 @@ h1, h2, h3 {
   font-family: var(--font-display);
   font-size: 2.25rem;
   font-weight: 700;
-  color: var(--orange);
+  color: var(--gold);
   opacity: 0.45;
   display: block;
   margin-bottom: 0.75rem;
@@ -313,12 +313,12 @@ h1, h2, h3 {
 
 .gap-future {
   background: var(--black-card);
-  border: 1px solid var(--orange);
+  border: 1px solid var(--gold);
 }
 
 .gap-col h3 { margin-bottom: 1.25rem; font-size: 1.3rem; }
 
-.gap-future h3 { color: var(--orange); }
+.gap-future h3 { color: var(--gold); }
 
 .gap-col ul { list-style: none; }
 
@@ -341,7 +341,7 @@ h1, h2, h3 {
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--orange);
+  color: var(--gold);
   font-size: 0.85rem;
   top: 0.15rem;
 }
@@ -374,7 +374,7 @@ h1, h2, h3 {
 
 .pillar-card {
   background: var(--black-card);
-  border-left: 3px solid var(--orange);
+  border-left: 3px solid var(--gold);
   border-radius: 6px;
   padding: 2rem;
 }
@@ -409,7 +409,7 @@ h1, h2, h3 {
   content: "✓";
   position: absolute;
   left: 1.1rem;
-  color: var(--orange);
+  color: var(--gold);
   font-weight: 700;
 }
 
@@ -427,7 +427,7 @@ h1, h2, h3 {
   font-family: var(--font-display);
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--orange);
+  color: var(--gold);
   font-size: clamp(1.25rem, 2.8vw, 1.6rem) !important;
   margin-top: 1.75rem;
 }
@@ -476,7 +476,7 @@ h1, h2, h3 {
   text-transform: uppercase;
   font-weight: 600;
   font-size: clamp(1.15rem, 2.4vw, 1.45rem);
-  color: var(--orange);
+  color: var(--gold);
   margin-top: 1.75rem;
   line-height: 1.4;
 }
@@ -516,7 +516,7 @@ h1, h2, h3 {
   height: 2.1rem;
   flex-shrink: 0;
   border-radius: 50%;
-  background: var(--orange);
+  background: var(--gold);
   color: var(--black);
   font-size: 1.05rem;
   margin-left: -3.1rem;
@@ -583,7 +583,7 @@ h1, h2, h3 {
   right: 0.25rem;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--orange);
+  color: var(--gold);
   font-size: 1.6rem;
   font-weight: 400;
   transition: transform 0.2s ease;
@@ -605,7 +605,7 @@ h1, h2, h3 {
 .final-close {
   text-align: center;
   background:
-    radial-gradient(ellipse 70% 60% at 50% 100%, rgba(255, 107, 26, 0.12), transparent);
+    radial-gradient(ellipse 70% 60% at 50% 100%, rgba(232, 196, 105, 0.12), transparent);
 }
 
 .final-close > .container > p {
