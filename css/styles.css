@@ -123,6 +123,45 @@ h1, h2, h3 {
 
 .placeholder-portrait { min-height: 420px; }
 
+/* ---------- Real photos ---------- */
+.portrait-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.story-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.lifestyle-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.lifestyle-photo:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold);
+}
+
+.coaching-message-photo {
+  display: block;
+  width: min(620px, 100%);
+  margin: 0 auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
 .placeholder-lifestyle { min-height: 180px; padding: 1rem; }
 
 /* ============================================================
