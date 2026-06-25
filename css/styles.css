@@ -154,13 +154,6 @@ h1, h2, h3 {
   border-color: var(--gold);
 }
 
-.coaching-message-photo {
-  display: block;
-  width: min(620px, 100%);
-  margin: 0 auto;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-}
 
 .placeholder-lifestyle { min-height: 180px; padding: 1rem; }
 
@@ -486,15 +479,6 @@ h1, h2, h3 {
   color: var(--grey);
   font-size: 1.15rem;
 }
-
-/* ============================================================
-   SECTION 11: CLIENT MESSAGES
-   ============================================================ */
-.testimonial-bar {
-  padding-block: 3rem;
-}
-
-.placeholder-messages { min-height: 240px; }
 
 /* ============================================================
    SECTION 12: PERSONAL STORY
