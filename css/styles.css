@@ -1,5 +1,5 @@
 /* ============================================================
-   DOMAN COACHING — STYLES
+   REFORGED METHOD — STYLES
    Brand colours live in :root — change them once, they update
    everywhere.
    ============================================================ */
@@ -356,7 +356,7 @@ h1, h2, h3 {
 }
 
 /* ============================================================
-   SECTION 7: CORE FOUR PILLARS
+   SECTION 7: THE CORE 3
    ============================================================ */
 .pillars { background: var(--black-soft); }
 
@@ -367,6 +367,10 @@ h1, h2, h3 {
   max-width: 850px;
   margin: 0 auto;
 }
+
+.pillars-grid-three { grid-template-columns: repeat(3, 1fr); max-width: 1000px; }
+
+.placeholder-application { min-height: 260px; margin-top: 1.5rem; }
 
 .pillar-card {
   background: var(--black-card);
@@ -445,40 +449,13 @@ h1, h2, h3 {
 }
 
 /* ============================================================
-   SECTION 11: TESTIMONIAL TICKER
+   SECTION 11: CLIENT MESSAGES
    ============================================================ */
 .testimonial-bar {
-  padding-block: 1.5rem;
-  background: var(--orange);
-  overflow: hidden;
+  padding-block: 3rem;
 }
 
-.ticker { overflow: hidden; }
-
-.ticker-track {
-  display: flex;
-  gap: 4rem;
-  width: max-content;
-  animation: ticker-scroll 40s linear infinite;
-}
-
-.ticker-track span {
-  font-family: var(--font-display);
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: var(--black);
-  white-space: nowrap;
-}
-
-@keyframes ticker-scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ticker-track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; }
-}
+.placeholder-messages { min-height: 240px; }
 
 /* ============================================================
    SECTION 12: PERSONAL STORY
@@ -552,11 +529,6 @@ h1, h2, h3 {
 .booking-headline {
   font-size: clamp(1.4rem, 3vw, 1.9rem);
   margin-bottom: 1.5rem;
-}
-
-.calendly-inline-widget {
-  border-radius: 6px;
-  overflow: hidden;
 }
 
 /* ============================================================
@@ -677,6 +649,7 @@ h1, h2, h3 {
 @media (max-width: 900px) {
   .results-grid { grid-template-columns: repeat(2, 1fr); }
   .phases-grid { grid-template-columns: repeat(2, 1fr); }
+  .pillars-grid-three { grid-template-columns: repeat(2, 1fr); }
   .lifestyle-grid { grid-template-columns: repeat(2, 1fr); }
   .education-grid { grid-template-columns: repeat(2, 1fr); }
   .included-grid { grid-template-columns: repeat(2, 1fr); }
@@ -696,6 +669,7 @@ h1, h2, h3 {
   .phases-grid,
   .included-grid,
   .education-grid,
+  .pillars-grid-three,
   .gap-columns { grid-template-columns: 1fr; }
 
   /* Keep transformations 2-per-row on mobile so the section
