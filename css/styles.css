@@ -245,16 +245,10 @@ h1, h2, h3 {
   font-size: 0.78rem;
 }
 
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-
 .header-logo-link { display: flex; }
 
 .header-logo {
-  height: 42px;
+  height: 48px;
   width: auto;
   display: block;
 }
