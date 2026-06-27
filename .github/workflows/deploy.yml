@@ -35,6 +35,10 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ./
+          # Hostinger's FTP can be slow to answer; allow more time before
+          # giving up so transient "Timeout (control socket)" errors don't
+          # fail the deploy.
+          timeout: 120000
           # Only the site files get uploaded — repo/meta files are skipped.
           exclude: |
             **/.git*
