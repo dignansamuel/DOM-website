@@ -248,7 +248,7 @@ h1, h2, h3 {
 .header-logo-link { display: flex; }
 
 .header-logo {
-  height: 24px;
+  height: 50px;
   width: auto;
   display: block;
 }
