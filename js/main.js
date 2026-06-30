@@ -18,9 +18,8 @@ faqItems.forEach((item) => {
   });
 });
 
-// CTA buttons scroll to the application section (#apply).
-// Booking via Calendly was removed in favour of an application-first
-// filter; the form embed/link will live in the #apply section.
+// CTA buttons link directly to WhatsApp (wa.me) with a pre-filled
+// message. The previous application form / Calendly flow was removed.
 
 // Lightbox: click any content photo to view it larger.
 const zoomable = document.querySelectorAll(
